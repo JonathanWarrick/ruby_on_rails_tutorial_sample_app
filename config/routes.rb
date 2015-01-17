@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   post 'login'    => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
   resources :users # CHECK TABLE 7.1 IN RAILS TUTORIAL FOR REST PATH LIST
+  resources :account_activations, only: [:edit]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
